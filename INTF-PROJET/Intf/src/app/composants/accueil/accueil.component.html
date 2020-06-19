@@ -1,0 +1,66 @@
+<div class="pa">
+  <!--app-navbar></!--app-navbar-->
+   <div class="entete fade-in">
+        <div class="c"></div>
+    <div class="text">
+       <h5 class="text-center"> <i> Réservez votre billet en un seul click !</i></h5>
+    </div>
+ </div>
+</div>
+
+<div>
+  <section>
+    <h3 class="mt-5 text-center titre">Liste des voyages</h3>
+    <div class="t">
+      <table class="table">
+        <thead class="thead-dark" style="text-align: center;">
+          <tr>
+            <th scope="col">Agence</th>
+            <th scope="col">Ville/Départ</th>
+            <th scope="col">Ville/Arrivée</th>
+            <th scope="col">Date </th>
+            <th scope="col"> Heure de départ</th>
+          </tr>
+        </thead>
+        <tbody class="rt">
+          <tr *ngFor="let v of voyage">
+            <th scope="col">{{v.nomAgence}}</th>
+            <th scope="col">{{v.lieuDepart}}</th>
+            <th scope="col">{{v.lieuArrive}}</th>
+            <th scope="col">{{v.dateDepart}} GMT</th>
+            <th scope="col">{{v.heureDepart}} GMT</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+   </section>
+</div>
+<div>
+  <section>
+    <h3 class="mt-5 text-center titre">Liste des resérvations</h3>
+    <div class="t">
+      <table class="table" style="text-align: center;">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Agence</th>
+            <th scope="col">Nb de passagers</th>
+            <th scope="col">Nb de passager restant</th>
+          </tr>
+        </thead>
+        <tbody class="rt">
+          <tr *ngFor="let r of reservation">
+
+            <td>{{r.idVoyage}}</td>
+            <td>{{r.nbPassager}}</td>
+            <td>{{r.passagers}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </div>
+   </section>
+</div>
